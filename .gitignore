@@ -19,11 +19,11 @@ class Process implements Comparable<Process> {
         this.ioOperations = ioOperations;
     }
 
-    // Η μέθοδος compareTo (υλοποιεί την διεπαφή comparable) η οποία συγκρίνει τις διεργασίες μεταξύ τους βάσει του χρόνου εκτέλεσης τους ("burstTime").
-    // Μικρότερο burst time = μεγαλύτερη σειρά προτεραιότητας
+    // Η μέθοδος compareTo (υλοποιεί την διεπαφή comparable) η οποία συγκρίνει τις διεργασίες μεταξύ τους βάσει του χρόνου εκτέλεσης τους ("arrivalTime").
+    // Μικρότερο arrival time = μεγαλύτερη σειρά προτεραιότητας
     @Override
     public int compareTo(Process other) {
-        return Integer.compare(this.burstTime, other.burstTime);
+        return Integer.compare(this.arrivalTime, other.arrivalTime);
     }
 }
 
